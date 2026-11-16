@@ -1,6 +1,7 @@
 package tipos;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
 public class Caballo {
@@ -59,5 +60,21 @@ public class Caballo {
 		return (int) fechaNacimiento.until(LocalDate.now(), ChronoUnit.DAYS);
 	}
 	
+	// Representación como cadena.
+	// Nombre del caballo y entre paréntesis la edad
+	
+		@Override
+		public String toString() {
+			return nombre + "(" + getEdad() + ")";
+		}
+		
+		public String mostrarTodo() {
+			return "Caballo [nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento + ", velocidad=" + velocidad + ", tipo=" + tipo + "]";
+		}
+		
+		public String mostrarTodoFechaOrdenada() {
+			DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+			return "Caballo [nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento.format(formato) + ", velocidad=" + velocidad + ", tipo=" + tipo + "]";
+		}
 	
 }

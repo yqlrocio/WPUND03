@@ -14,6 +14,10 @@ public class TestCaballo {
 		Caballo c1 = new Caballo ("Pepe", fecha, 23.5, Tipo.DOMESTICO); 
 		System.out.println(c1.getNombre());
 		System.out.println(c1.getEdad());
+		System.out.println(c1);
+		System.out.println(c1.mostrarTodo());
+		System.out.println(c1.mostrarTodoFechaOrdenada());
+
 	}
 
 }
