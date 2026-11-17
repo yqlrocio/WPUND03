@@ -13,9 +13,12 @@ public class Punto {
 	}
 	
 	// CONSTRUCTOR POR DEFECTO
+//	public Punto() {
+//		this.x = 0.0;
+//		this.y = 0.0;
+//	}
 	public Punto() {
-		this.x = 0.0;
-		this.y = 0.0;
+		this(0.0, 0.0);
 	}
 	public Double getX() {
 		return x;
@@ -32,8 +35,12 @@ public class Punto {
 
 	@Override
 	public String toString() {
-		return "Punto -> x=" + getX() + ", y=" + getY();
+		return "Punto -> x=" + this.getX() + ", y=" + this.getY();
 	}
 
-	
+	public Double distanciaA(Punto p) {
+		Double catX = this.getX() - p.getX();
+		Double catY = this.getY() - p.getY();
+		return Math.sqrt(catX * catX + catY * catY); 
+	}
 }
