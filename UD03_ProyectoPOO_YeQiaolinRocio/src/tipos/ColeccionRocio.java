@@ -5,9 +5,10 @@ import java.util.List;
 
 public class ColeccionRocio {
 	
-	private String jugador;
+	public String jugador;
 	private List <VideoJuegoRocio> juegos;
 	
+	// CREAR COLLECION
 	public ColeccionRocio(String jugador) {
 	    if (jugador == null || jugador.isBlank()) {
 	        throw new IllegalArgumentException("El nombre del jugador no puede estar vacío");
@@ -16,6 +17,7 @@ public class ColeccionRocio {
 	    this.juegos = new ArrayList<>();
 	}
 	
+	// AGREGAR VIDEOJUEGO
 	public boolean agregar(VideoJuegoRocio juego) {
 	    if (juego == null) {
 	        return false;
@@ -28,6 +30,7 @@ public class ColeccionRocio {
 	    return this.juegos.add(juego);
 	}
 	
+	// ELIMINAR VIDEOJUEGO
 	public boolean eliminarPorId(Integer id) {
 		    if (id == null) {
 		        return false;
@@ -43,6 +46,7 @@ public class ColeccionRocio {
 		    return false;
 		}
 	
+	// BUSCAR VIDEOJUEGO POR ID
 	public VideoJuegoRocio buscarPorId(Integer id) {
 	    if (id == null) {
 	        return null;
@@ -56,6 +60,7 @@ public class ColeccionRocio {
 	    return null;
 	}
 	
+	// CALCULAR LA MEDIA DE HORAS JUGADAS POR LOS JUGADORES
 	public Integer calcularMediaHoras() {
 		Integer suma = 0;
 		Integer contador = 0;
