@@ -1,5 +1,7 @@
 package tipos;
 
+import java.util.Objects;
+
 public class VideoJuegoRocio {
 	
 	private final Integer ID;
@@ -70,4 +72,22 @@ public class VideoJuegoRocio {
 		return "ID=" + ID + ", Nombre = " + nombre + ", Precio = " + precio + ", Fecha de Salida = "
 				+ FECHA_DE_SALIDA + ", Horas Jugadas = " + horasJugadas + ", ¿Completado? = " + completado + ", Genero = " + genero;
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(ID);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		VideoJuegoRocio other = (VideoJuegoRocio) obj;
+		return Objects.equals(ID, other.ID);
+	}
+	
 }

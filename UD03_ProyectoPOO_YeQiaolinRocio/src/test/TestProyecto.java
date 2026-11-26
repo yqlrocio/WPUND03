@@ -7,6 +7,7 @@ import tipos.VideoJuegoRocio;
 public class TestProyecto {
 
 	public static void main(String[] args) {
+		
 		ColeccionRocio miColeccion = new ColeccionRocio ("Rocio");
 
 		VideoJuegoRocio v1 = new VideoJuegoRocio(1, "Elden Ring", 59.00, "18/07/2019", 23, false, Genero.RPG);
@@ -23,9 +24,6 @@ public class TestProyecto {
 		miColeccion.eliminarPorId(2);
 		System.out.println("La media de hora de juegos de Rocio es de: " + miColeccion.calcularMediaHoras());
 		System.out.println("El juego que buscabas es: " + videoJuegoABuscar);
-		
-
-		
 		
 	}
 
