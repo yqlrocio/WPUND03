@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class VideoJuegoRocio {
 	
+	// E1 ATRIBUTOS PRIVADOS
 	private final Integer ID;
 	private String nombre; 
 	private Double precio;
@@ -12,6 +13,7 @@ public class VideoJuegoRocio {
 	private Boolean completado;
 	private Genero genero;
 	
+	// E2 Y E3: CONSTRUCTOR, GETTERS Y SETTERS
 	public VideoJuegoRocio(Integer id, String nombre, Double precio, String fechaDeSalida, Integer horasJugadas,
 			Boolean completado, Genero genero) {
 		this.ID = id;
@@ -67,12 +69,30 @@ public class VideoJuegoRocio {
 		return genero;
 	}
 
+	// E4:
+	
+	
+	// E5: CALCULAR LA CATEGORIA SEGÚN LAS HORAS JUGADAS
+    public String calcularCategoriaDedicacion() {
+        if (horasJugadas == 0) {
+            return "Sin empezar";
+        } else if (horasJugadas < 20) {
+            return "NOOB";
+        } else if (horasJugadas < 80) {
+            return "CASUAL";
+        } else {
+            return "PRO";
+        }
+    }
+    
+	// E6: TOSTRING()
 	@Override
 	public String toString() {
 		return "ID=" + ID + ", Nombre = " + nombre + ", Precio = " + precio + ", Fecha de Salida = "
 				+ FECHA_DE_SALIDA + ", Horas Jugadas = " + horasJugadas + ", ¿Completado? = " + completado + ", Genero = " + genero;
 	}
 
+	// EXTRA
 	@Override
 	public int hashCode() {
 		return Objects.hash(ID);

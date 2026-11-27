@@ -5,10 +5,10 @@ import java.util.List;
 
 public class ColeccionRocio {
 	
+	// C1: IDENTIFICAR COLECCIÓN Y LISTA PRIVADA
 	public String jugador;
 	private List <VideoJuegoRocio> juegos;
 	
-	// C1: IDENTIFICAR COLECCIÓN
 	public ColeccionRocio(String jugador) {
 	    if (jugador == null || jugador.isBlank()) {
 	        throw new IllegalArgumentException("El nombre del jugador no puede estar vacío");
@@ -65,6 +65,12 @@ public class ColeccionRocio {
         return juegos.size();
     }
     
+    // C6: 
+    
+    
+    // C7: 
+    
+    
 	// C8: CALCULAR LA MEDIA DE HORAS JUGADAS POR LOS JUGADORES
 	public Integer calcularMediaHoras() {
 		Integer suma = 0;
@@ -78,7 +84,5 @@ public class ColeccionRocio {
 		
 		return suma/contador;
 	}
-	
-	
-	
+
 }
