@@ -17,6 +17,10 @@ public class ColeccionRocio {
 	    this.juegos = new ArrayList<>();
 	}
 	
+//	public List <VideoJuegoRocio> getVideoJuegoRocio() {
+//		return new ArrayList<>(juegos);
+//	}
+	
 	// C2: AGREGAR VIDEOJUEGO
 	public boolean agregar(VideoJuegoRocio juego) {
 	    if (juego == null) {
